@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALFHEIMR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">ALFHEIMR</span>
+      </div>
+      <button type="button" id="reset-btn" class="new-chat-btn">
+        <span>+</span> Nueva conversacion
+      </button>
+
+      <button type="button" id="about-btn" class="new-chat-btn about-btn">
+        <span>i</span> Acerca del nombre
+      </button>
+
+      <div class="sidebar-footer">
+        <p>Reino de la luz y la sabiduria elfica</p>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <div id="chat-box" class="chat-box">
+        {% if historial|selectattr('role', 'ne', 'system')|list|length == 0 %}
+        <div class="empty-state">
+          <h1>ALFHEIMR</h1>
+          <p>Escribe cualquier pregunta para comenzar la conversacion.</p>
+        </div>
+        {% endif %}
+        {% for msg in historial %}
+          {% if msg.role != 'system' %}
+          <div class="message {{ msg.role }}">
+            <div class="avatar {{ msg.role }}">{{ 'Tu' if msg.role == 'user' else 'IA' }}</div>
+            <div class="bubble">{{ msg.content }}</div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="input-area">
+        <form id="chat-form">
+          <input type="text" id="user-input" placeholder="Escribe tu mensaje..." autocomplete="off" required>
+          <button type="submit" class="send-btn" aria-label="Enviar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+        <p class="disclaimer">El asistente puede cometer errores. Verifica la informacion importante.</p>
+      </div>
+    </main>
+  </div>
+
+  <div id="about-modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button type="button" id="close-modal" class="close-modal">&times;</button>
+      <h2>¿Por que ALFHEIMR?</h2>
+      <p>
+        En la mitologia nordica, <strong>Alfheimr</strong> (tambien escrito Álfheimr) es uno de los
+        nueve mundos que existen alrededor del arbol cosmico Yggdrasil. Es el reino de los
+        <strong>elfos de luz</strong> (Ljosalfar), seres hermosos, sabios y luminosos,
+        gobernado por el dios Freyr.
+      </p>
+      <p>
+        Se dice que Alfheimr es un lugar de conocimiento, claridad y guia, donde habitan
+        criaturas mas brillantes que el sol. Elegimos este nombre para el asistente porque
+        representa exactamente lo que buscamos ofrecer: un espacio de <strong>claridad,
+        sabiduria y ayuda</strong> para resolver tus dudas, tal como los elfos de luz
+        iluminaban el camino de quienes los visitaban.
+      </p>
+      <p class="modal-footer">Proyecto Victor Martinez</p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
