@@ -135,11 +135,9 @@ http://localhost:5000
 ## Funcionalidades implementadas
 
 - Chat conversacional con respuestas generadas por IA.
-- Historial de conversación dentro de la sesión.
-- Interfaz visual personalizada con estilo oscuro en tonos índigo.
+- Interfaz visual personalizada.
 - Botón de nueva conversación para reiniciar el chat.
 - Sección informativa sobre el nombre **ALFHEIMR** dentro de la interfaz.
-- Manejo de errores si la API key falta o no es válida.
 
 ## Autor
 
