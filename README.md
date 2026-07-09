@@ -2,15 +2,15 @@
 
 ## Descripción
 
-Este proyecto consiste en la implementación de un chatbot utilizando la API de Google Gemini y Python, siguiendo la estructura y funcionamiento de los ejemplos oficiales de quickstart de Gemini para Python y Flask. [web:128][web:129]
+Este proyecto consiste en la implementación de un chatbot utilizando la API de Google Gemini y Python, siguiendo la estructura y funcionamiento de los ejemplos oficiales de quickstart de Gemini para Python y Flask.
 
-El objetivo es comprender el funcionamiento de la API, la arquitectura de un chatbot. [web:128][web:130]
+El objetivo es comprender el funcionamiento de la API, la arquitectura de un chatbot.
 
 ## Objetivos
 
 ### Objetivo General
 
-Replicar el funcionamiento de un proyecto base de chatbot con Python y Flask, comprendiendo cada uno de sus componentes y el proceso completo de comunicación entre la aplicación y la API de Google Gemini. [web:128][web:129]
+Replicar el funcionamiento de un proyecto base de chatbot con Python y Flask, comprendiendo cada uno de sus componentes y el proceso completo de comunicación entre la aplicación y la API de Google Gemini.
 
 ### Objetivos Específicos
 
@@ -20,25 +20,24 @@ Replicar el funcionamiento de un proyecto base de chatbot con Python y Flask, co
 - Comprender el funcionamiento del historial de conversación.
 - Analizar el funcionamiento de Flask como servidor web.
 - Implementar una interfaz visual moderna para la interacción con el usuario.
-- Aplicar buenas prácticas de seguridad mediante el uso de variables de entorno para la API key. [web:129][web:142]
-
+- Aplicar buenas prácticas de seguridad mediante el uso de variables de entorno para la API key.
 ## Tecnologías utilizadas
 
 - Python
-- Flask [web:128]
-- Google Gemini API [web:129]
+- Flask
+- Google Gemini API
 - HTML5
 - CSS3
 - JavaScript
 - Git
 - GitHub
-- python-dotenv [web:141]
+- python-dotenv
 
 ## Requisitos
 
-- Python 3.10 o superior [web:128]
+- Python 3.10 o superior
 - Cuenta de Google
-- API Key válida de Gemini [web:134]
+- API Key válida de Gemini
 - Git
 
 ## Instalación
@@ -91,7 +90,7 @@ con el siguiente contenido:
 GEMINI_API_KEY=TU_API_KEY
 ```
 
-La API key gratuita puede obtenerse desde Google AI Studio: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey). [web:134]
+La API key gratuita puede obtenerse desde Google AI Studio: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey).
 
 ## Estructura del proyecto
 
@@ -150,4 +149,4 @@ Grupo 1S3232
 
 ## Créditos
 
-Este proyecto se basa conceptualmente en los ejemplos oficiales de inicio rápido de Google Gemini para Python y Flask, utilizados exclusivamente con fines educativos y académicos. [web:128][web:129]
+Este proyecto se basa conceptualmente en los ejemplos oficiales de inicio rápido de Google Gemini para Python y Flask, utilizados exclusivamente con fines educativos y académicos.
